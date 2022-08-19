@@ -94,3 +94,11 @@ Plugins/**/Binaries/*
 Plugins/**/Intermediate/*
 
 # End of https://www.toptal.com/developers/gitignore/api/unrealengine
+
+# Wwise
+medieval-env-sound_WwiseProject/.cache
+*.validationcache
+*.wsettings
+SoundbanksInfo.xml
+PluginInfo.xml
+*.akd
