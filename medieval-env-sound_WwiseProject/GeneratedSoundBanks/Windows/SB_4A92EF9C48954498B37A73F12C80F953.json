@@ -16,22 +16,10 @@
     "Id": "3794906351",
     "GUID": "{E231ACEF-ACEF-1CEF-EFEF-EFEFEFEFEFEF}",
     "Language": "SFX",
-    "Hash": "2311968360",
+    "Hash": "2252933551",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\SB_4A92EF9C48954498B37A73F12C80F953",
     "ShortName": "SB_4A92EF9C48954498B37A73F12C80F953",
-    "Path": "SB_4A92EF9C48954498B37A73F12C80F953.bnk",
-    "IncludedEvents": [
-     {
-      "Id": "4258653052",
-      "Name": "Test_Event",
-      "ObjectPath": "\\Events\\Default Work Unit\\Test_Event",
-      "GUID": "{4A92EF9C-4895-4498-B37A-73F12C80F953}",
-      "MaxAttenuation": "0.",
-      "DurationType": "OneShot",
-      "DurationMin": "0.",
-      "DurationMax": "0."
-     }
-    ]
+    "Path": "SB_4A92EF9C48954498B37A73F12C80F953.bnk"
    }
   ]
  }

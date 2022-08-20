@@ -1,6 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{46BCB710-D88C-4F49-ADDD-0CA7E5CE1137}" SchemaVersion="103">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{46BCB710-D88C-4F49-ADDD-0CA7E5CE1137}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{46BCB710-D88C-4F49-ADDD-0CA7E5CE1137}" PersistMode="Standalone">
+			<ChildrenList>
+				<ActorMixer Name="World" ID="{705C1F0B-74C4-4A83-8D7F-DDC7093EB7B9}" ShortID="556870632">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="14"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D70F1E77-E8B7-41D6-9645-6538315620E9}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="World" ID="{72368D1D-FE54-4BC9-B0A6-5E24D4CDDA2D}" WorkUnitID="{93772EA4-ACBC-4793-A4FE-3AB65A68105E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<ActorMixer Name="Ambience" ID="{785F4223-E477-4BA7-8248-ABFF18098352}" ShortID="763395727">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="19"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+								<Property Name="OverrideOutput" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D70F1E77-E8B7-41D6-9645-6538315620E9}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Ambience" ID="{34830421-4EB6-4ED5-A569-B8400A319FF5}" WorkUnitID="{93772EA4-ACBC-4793-A4FE-3AB65A68105E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<ActorMixer Name="Emitters" ID="{7AACE289-537A-4A53-BA14-96AAC2C86536}" ShortID="859359121">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D70F1E77-E8B7-41D6-9645-6538315620E9}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93772EA4-ACBC-4793-A4FE-3AB65A68105E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Bird_Calls_Loop" ID="{0422B3DB-9BD6-40AD-AADB-8902C0CB1F74}" ShortID="556574639">
+											<PropertyList>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D70F1E77-E8B7-41D6-9645-6538315620E9}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93772EA4-ACBC-4793-A4FE-3AB65A68105E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Windy Morning Bird Calls on Mountain Peak (isolated to birds) (mono)" ID="{DE93117A-1532-4F39-822F-224DEC50C87A}">
+													<Language>SFX</Language>
+													<AudioFile>Windy Morning Bird Calls on Mountain Peak (isolated to birds) (mono).wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="607899881"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="Windy Morning Bird Calls on Mountain Peak (isolated to birds) (mono) (loop)" ID="{77BC58BB-F172-4DAC-8C26-07289A467F0D}">
+													<Language>SFX</Language>
+													<AudioFile>Windy Morning Bird Calls on Mountain Peak (isolated to birds) (mono) (loop).wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="857211354"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Windy Morning Bird Calls on Mountain Peak (isolated to birds) (mono) (loop)" ID="{77BC58BB-F172-4DAC-8C26-07289A467F0D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists/>
+								</ActorMixer>
+							</ChildrenList>
+							<ObjectLists/>
+						</ActorMixer>
+					</ChildrenList>
+					<ObjectLists/>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>
