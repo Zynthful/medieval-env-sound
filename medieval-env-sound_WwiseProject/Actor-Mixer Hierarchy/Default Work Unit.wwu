@@ -1073,6 +1073,67 @@
 									</ChildrenList>
 									<ObjectLists/>
 								</ActorMixer>
+								<SwitchContainer Name="Ambience Zone" ID="{D27E29B0-F0FB-4241-8DC4-E44BE6CD48A6}" ShortID="594012789">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D70F1E77-E8B7-41D6-9645-6538315620E9}"/>
+										</Reference>
+										<Reference Name="DefaultSwitchOrState">
+											<ObjectRef Name="None" ID="{815A6E9B-5929-4DB0-B1E7-F2D583FEB142}" WorkUnitID="{451916B3-2145-4F1A-BCE8-F800B1A95461}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93772EA4-ACBC-4793-A4FE-3AB65A68105E}"/>
+										</Reference>
+										<Reference Name="SwitchGroupOrStateGroup">
+											<ObjectRef Name="Current_Zone" ID="{ADA6DC9B-0622-433C-859C-B4E56D65EB49}" WorkUnitID="{451916B3-2145-4F1A-BCE8-F800B1A95461}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Castle Courtyard Loop" ID="{9D229D44-266F-40CB-B1F0-8458F6E6A2DF}" ShortID="574951014">
+											<PropertyList>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="OverridePositioning" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D70F1E77-E8B7-41D6-9645-6538315620E9}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Ambience" ID="{34830421-4EB6-4ED5-A569-B8400A319FF5}" WorkUnitID="{93772EA4-ACBC-4793-A4FE-3AB65A68105E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="AMBForst_InsJ_Ambience_Day-Wildlife_01-01_LOOP_EQ" ID="{783A1895-C7E4-4B70-AE24-66610C6D061C}">
+													<Language>SFX</Language>
+													<AudioFile>AMBForst_InsJ_Ambience_Day-Wildlife_01-01_LOOP_EQ.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="691400281"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="AMBForst_InsJ_Ambience_Day-Wildlife_01-01_LOOP_EQ" ID="{783A1895-C7E4-4B70-AE24-66610C6D061C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists/>
+									<GroupingInfo>
+										<GroupingBehaviorList>
+											<GroupingBehavior>
+												<ItemRef Name="Castle Courtyard Loop" ID="{9D229D44-266F-40CB-B1F0-8458F6E6A2DF}"/>
+											</GroupingBehavior>
+										</GroupingBehaviorList>
+										<GroupingList>
+											<Grouping>
+												<SwitchRef Name="Castle_Courtyard" ID="{44439C3D-39D0-444F-AF2D-E847D03B8E5A}"/>
+												<ItemList>
+													<ItemRef Name="Castle Courtyard Loop" ID="{9D229D44-266F-40CB-B1F0-8458F6E6A2DF}"/>
+												</ItemList>
+											</Grouping>
+										</GroupingList>
+									</GroupingInfo>
+								</SwitchContainer>
 							</ChildrenList>
 							<ObjectLists/>
 						</ActorMixer>

@@ -3,23 +3,41 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{CD769207-30C5-48C3-B17F-727FA34EB801}" PersistMode="Standalone">
 			<ChildrenList>
-				<Folder Name="Ambient Emitters" ID="{B254206D-45BF-4219-A9C2-B9BCA66124A9}" ShortID="720851312">
+				<Folder Name="Ambience" ID="{20B88ACD-EBDB-4DEE-BA0B-7ED3E8B0E92A}" ShortID="888684445">
 					<PropertyList>
-						<Property Name="Color" Type="int16" Value="5"/>
+						<Property Name="Color" Type="int16" Value="19"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
-						<Event Name="Ambient_Emitter_Birds" ID="{4A92EF9C-4895-4498-B37A-73F12C80F953}">
+						<Event Name="Ambience_Zone" ID="{D82997F9-5023-4C8E-A8A9-4A8D3D504D2A}">
 							<ChildrenList>
-								<Action Name="" ID="{41C5FFE1-09A6-45DB-AB98-41F2FBB37A47}" ShortID="630585115">
+								<Action Name="" ID="{148D89E9-09AA-4553-8C8B-6472ABE60412}" ShortID="406860640">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Birds_Whistling_Trees" ID="{1F64907F-B80A-4841-969F-4807218DCBCF}" WorkUnitID="{46BCB710-D88C-4F49-ADDD-0CA7E5CE1137}"/>
+											<ObjectRef Name="Ambience Zone" ID="{D27E29B0-F0FB-4241-8DC4-E44BE6CD48A6}" WorkUnitID="{46BCB710-D88C-4F49-ADDD-0CA7E5CE1137}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Folder Name="Ambient Emitters" ID="{B254206D-45BF-4219-A9C2-B9BCA66124A9}" ShortID="720851312">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="5"/>
+							</PropertyList>
+							<ChildrenList>
+								<Event Name="Ambient_Emitter_Birds" ID="{4A92EF9C-4895-4498-B37A-73F12C80F953}">
+									<ChildrenList>
+										<Action Name="" ID="{41C5FFE1-09A6-45DB-AB98-41F2FBB37A47}" ShortID="630585115">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Birds_Whistling_Trees" ID="{1F64907F-B80A-4841-969F-4807218DCBCF}" WorkUnitID="{46BCB710-D88C-4F49-ADDD-0CA7E5CE1137}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

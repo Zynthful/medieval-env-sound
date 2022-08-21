@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{451916B3-2145-4F1A-BCE8-F800B1A95461}" SchemaVersion="103">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{451916B3-2145-4F1A-BCE8-F800B1A95461}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{451916B3-2145-4F1A-BCE8-F800B1A95461}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="Current_Zone" ID="{ADA6DC9B-0622-433C-859C-B4E56D65EB49}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="19"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{815A6E9B-5929-4DB0-B1E7-F2D583FEB142}"/>
+						<State Name="Castle_Courtyard" ID="{44439C3D-39D0-444F-AF2D-E847D03B8E5A}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</States>
 </WwiseDocument>
