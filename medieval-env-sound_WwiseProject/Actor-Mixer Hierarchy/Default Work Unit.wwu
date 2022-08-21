@@ -5,10 +5,58 @@
 			<ChildrenList>
 				<ActorMixer Name="World" ID="{705C1F0B-74C4-4A83-8D7F-DDC7093EB7B9}" ShortID="556870632">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 						<Property Name="Color" Type="int16" Value="14"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<Custom>
+								<Attenuation Name="Attenuation (Custom)" ID="{3ECDED06-4493-4D9A-9973-58B85DC087DA}" ShortID="394946310">
+									<CurveUsageInfoList>
+										<VolumeDryUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+												<Curve Name="VolumeDry" ID="{A0110553-270E-438F-B8BF-3F509E91E96E}">
+													<PropertyList>
+														<Property Name="Flags" Type="int32" Value="3"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>0</XPos>
+															<YPos>0</YPos>
+															<Flags>5</Flags>
+														</Point>
+														<Point>
+															<XPos>100</XPos>
+															<YPos>-200</YPos>
+															<Flags>37</Flags>
+														</Point>
+													</PointList>
+												</Curve>
+											</CurveUsageInfo>
+										</VolumeDryUsage>
+										<VolumeWetGameUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+										</VolumeWetGameUsage>
+										<VolumeWetUserUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+										</VolumeWetUserUsage>
+										<LowPassFilterUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</LowPassFilterUsage>
+										<HighPassFilterUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</HighPassFilterUsage>
+										<SpreadUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</SpreadUsage>
+										<FocusUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</FocusUsage>
+									</CurveUsageInfoList>
+								</Attenuation>
+							</Custom>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D70F1E77-E8B7-41D6-9645-6538315620E9}"/>
 						</Reference>
@@ -42,9 +90,21 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Bird_Calls_Loop" ID="{0422B3DB-9BD6-40AD-AADB-8902C0CB1F74}" ShortID="556574639">
+										<RandomSequenceContainer Name="Birds_In_Trees" ID="{1F64907F-B80A-4841-969F-4807218DCBCF}" ShortID="195094843">
 											<PropertyList>
-												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="InitialDelay" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{FA665A60-0FDE-4500-A2B2-570207630A93}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="2"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="OverrideEffect" Type="bool" Value="True"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -55,26 +115,47 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="Windy Morning Bird Calls on Mountain Peak (isolated to birds) (mono)" ID="{DE93117A-1532-4F39-822F-224DEC50C87A}">
-													<Language>SFX</Language>
-													<AudioFile>Windy Morning Bird Calls on Mountain Peak (isolated to birds) (mono).wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="607899881"/>
-													</MediaIDList>
-												</AudioFileSource>
-												<AudioFileSource Name="Windy Morning Bird Calls on Mountain Peak (isolated to birds) (mono) (loop)" ID="{77BC58BB-F172-4DAC-8C26-07289A467F0D}">
-													<Language>SFX</Language>
-													<AudioFile>Windy Morning Bird Calls on Mountain Peak (isolated to birds) (mono) (loop).wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="857211354"/>
-													</MediaIDList>
-												</AudioFileSource>
+												<Sound Name="Bird_Calls_Loop" ID="{0422B3DB-9BD6-40AD-AADB-8902C0CB1F74}" ShortID="556574639">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+														<Property Name="OverridePositioning" Type="bool" Value="True"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Birds" ID="{15F83021-B0C4-4BC7-9DE7-3080D3301EED}" WorkUnitID="{A0EDA604-6258-45E0-8143-05B4C0735660}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D70F1E77-E8B7-41D6-9645-6538315620E9}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Ambience" ID="{34830421-4EB6-4ED5-A569-B8400A319FF5}" WorkUnitID="{93772EA4-ACBC-4793-A4FE-3AB65A68105E}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Windy Morning Bird Calls on Mountain Peak (isolated to birds) (mono)" ID="{DE93117A-1532-4F39-822F-224DEC50C87A}">
+															<Language>SFX</Language>
+															<AudioFile>Windy Morning Bird Calls on Mountain Peak (isolated to birds) (mono).wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="607899881"/>
+															</MediaIDList>
+														</AudioFileSource>
+														<AudioFileSource Name="Windy Morning Bird Calls on Mountain Peak (isolated to birds) (mono) (loop)" ID="{77BC58BB-F172-4DAC-8C26-07289A467F0D}">
+															<Language>SFX</Language>
+															<AudioFile>Windy Morning Bird Calls on Mountain Peak (isolated to birds) (mono) (loop).wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="857211354"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Windy Morning Bird Calls on Mountain Peak (isolated to birds) (mono) (loop)" ID="{77BC58BB-F172-4DAC-8C26-07289A467F0D}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
 											</ChildrenList>
 											<ObjectLists/>
-											<ActiveSourceList>
-												<ActiveSource Name="Windy Morning Bird Calls on Mountain Peak (isolated to birds) (mono) (loop)" ID="{77BC58BB-F172-4DAC-8C26-07289A467F0D}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
+										</RandomSequenceContainer>
 									</ChildrenList>
 									<ObjectLists/>
 								</ActorMixer>

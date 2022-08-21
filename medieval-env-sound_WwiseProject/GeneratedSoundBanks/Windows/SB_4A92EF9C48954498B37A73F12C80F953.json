@@ -16,10 +16,28 @@
     "Id": "3794906351",
     "GUID": "{E231ACEF-ACEF-1CEF-EFEF-EFEFEFEFEFEF}",
     "Language": "SFX",
-    "Hash": "2252933551",
+    "Hash": "2715239779",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\SB_4A92EF9C48954498B37A73F12C80F953",
     "ShortName": "SB_4A92EF9C48954498B37A73F12C80F953",
-    "Path": "SB_4A92EF9C48954498B37A73F12C80F953.bnk"
+    "Path": "SB_4A92EF9C48954498B37A73F12C80F953.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "699076633",
+      "Name": "Ambient_Emitter_Birds",
+      "ObjectPath": "\\Events\\Default Work Unit\\Ambient Emitters\\Ambient_Emitter_Birds",
+      "GUID": "{4A92EF9C-4895-4498-B37A-73F12C80F953}",
+      "MaxAttenuation": "100.",
+      "DurationType": "Infinite",
+      "ExcludedMemoryFiles": [
+       {
+        "Id": "857211354",
+        "Language": "SFX",
+        "ShortName": "Windy Morning Bird Calls on Mountain Peak (isolated to birds) (mono) (loop).wav",
+        "Path": "SFX\\Windy Morning Bird Calls on Mountain Peak (isolated to birds) (mono) (loop)_D79FB2B7.wem"
+       }
+      ]
+     }
+    ]
    }
   ]
  }
