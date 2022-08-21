@@ -14,7 +14,7 @@
 								<Action Name="" ID="{41C5FFE1-09A6-45DB-AB98-41F2FBB37A47}" ShortID="630585115">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Bird_Calls_Loop" ID="{0422B3DB-9BD6-40AD-AADB-8902C0CB1F74}" WorkUnitID="{46BCB710-D88C-4F49-ADDD-0CA7E5CE1137}"/>
+											<ObjectRef Name="Birds_Whistling_Trees" ID="{1F64907F-B80A-4841-969F-4807218DCBCF}" WorkUnitID="{46BCB710-D88C-4F49-ADDD-0CA7E5CE1137}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

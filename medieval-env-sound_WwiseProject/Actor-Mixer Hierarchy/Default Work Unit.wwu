@@ -81,6 +81,13 @@
 							</ReferenceList>
 							<ChildrenList>
 								<ActorMixer Name="Emitters" ID="{7AACE289-537A-4A53-BA14-96AAC2C86536}" ShortID="859359121">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-19</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D70F1E77-E8B7-41D6-9645-6538315620E9}"/>
@@ -90,8 +97,9 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<RandomSequenceContainer Name="Birds_In_Trees" ID="{1F64907F-B80A-4841-969F-4807218DCBCF}" ShortID="195094843">
+										<RandomSequenceContainer Name="Birds_Whistling_Trees" ID="{1F64907F-B80A-4841-969F-4807218DCBCF}" ShortID="195094843">
 											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
 												<Property Name="InitialDelay" Type="Real64">
 													<ModifierList>
 														<ModifierInfo>
@@ -105,8 +113,12 @@
 													</ModifierList>
 												</Property>
 												<Property Name="OverrideEffect" Type="bool" Value="True"/>
+												<Property Name="OverridePositioning" Type="bool" Value="True"/>
 											</PropertyList>
 											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="Birds" ID="{15F83021-B0C4-4BC7-9DE7-3080D3301EED}" WorkUnitID="{A0EDA604-6258-45E0-8143-05B4C0735660}"/>
+												</Reference>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D70F1E77-E8B7-41D6-9645-6538315620E9}"/>
 												</Reference>
@@ -118,6 +130,11 @@
 												<Sound Name="Bird_Calls_Loop" ID="{0422B3DB-9BD6-40AD-AADB-8902C0CB1F74}" ShortID="556574639">
 													<PropertyList>
 														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
 														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 														<Property Name="OverridePositioning" Type="bool" Value="True"/>
 													</PropertyList>
@@ -153,6 +170,903 @@
 														<ActiveSource Name="Windy Morning Bird Calls on Mountain Peak (isolated to birds) (mono) (loop)" ID="{77BC58BB-F172-4DAC-8C26-07289A467F0D}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
+												<RandomSequenceContainer Name="04" ID="{254B1020-BE21-4259-94C1-34E8A6949724}" ShortID="56337257">
+													<PropertyList>
+														<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+														<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+														<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D70F1E77-E8B7-41D6-9645-6538315620E9}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93772EA4-ACBC-4793-A4FE-3AB65A68105E}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="BIRDSong_InsJ_Bird-Whistling_Robin_Single_01-01" ID="{93D6131A-A46D-4F55-BD68-46F40CD9F85A}" ShortID="679891642">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D70F1E77-E8B7-41D6-9645-6538315620E9}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93772EA4-ACBC-4793-A4FE-3AB65A68105E}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="BIRDSong_InsJ_Bird-Whistling_Robin_Single_01-01" ID="{93FDA682-B362-41E0-BBEC-07ACCB3ABD98}">
+																	<Language>SFX</Language>
+																	<AudioFile>BIRDSong_InsJ_Bird-Whistling_Robin_Single_01-01.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="951333255"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ObjectLists/>
+															<ActiveSourceList>
+																<ActiveSource Name="BIRDSong_InsJ_Bird-Whistling_Robin_Single_01-01" ID="{93FDA682-B362-41E0-BBEC-07ACCB3ABD98}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="BIRDSong_InsJ_Bird-Whistling_Robin_Single_01-02" ID="{F0D3D4BF-1380-4964-8AC6-B0D4386F15DA}" ShortID="1060193200">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D70F1E77-E8B7-41D6-9645-6538315620E9}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93772EA4-ACBC-4793-A4FE-3AB65A68105E}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="BIRDSong_InsJ_Bird-Whistling_Robin_Single_01-02" ID="{1ACA1C60-8707-4769-A500-3D333F5BA4C0}">
+																	<Language>SFX</Language>
+																	<AudioFile>BIRDSong_InsJ_Bird-Whistling_Robin_Single_01-02.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="984189567"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ObjectLists/>
+															<ActiveSourceList>
+																<ActiveSource Name="BIRDSong_InsJ_Bird-Whistling_Robin_Single_01-02" ID="{1ACA1C60-8707-4769-A500-3D333F5BA4C0}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="BIRDSong_InsJ_Bird-Whistling_Robin_Single_01-03" ID="{9D0B9075-8BB9-4852-AE14-01E6E2D63337}" ShortID="483384964">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D70F1E77-E8B7-41D6-9645-6538315620E9}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93772EA4-ACBC-4793-A4FE-3AB65A68105E}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="BIRDSong_InsJ_Bird-Whistling_Robin_Single_01-03" ID="{0647C118-E832-4023-95D2-102A8FCF97D7}">
+																	<Language>SFX</Language>
+																	<AudioFile>BIRDSong_InsJ_Bird-Whistling_Robin_Single_01-03.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="346082756"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ObjectLists/>
+															<ActiveSourceList>
+																<ActiveSource Name="BIRDSong_InsJ_Bird-Whistling_Robin_Single_01-03" ID="{0647C118-E832-4023-95D2-102A8FCF97D7}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="BIRDSong_InsJ_Bird-Whistling_Robin_Single_02-01" ID="{F63865D0-3FB9-4B14-A8CA-89FF5722714D}" ShortID="698927129">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D70F1E77-E8B7-41D6-9645-6538315620E9}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93772EA4-ACBC-4793-A4FE-3AB65A68105E}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="BIRDSong_InsJ_Bird-Whistling_Robin_Single_02-01" ID="{0CE125AD-6F07-44E5-A3D2-248F120B678A}">
+																	<Language>SFX</Language>
+																	<AudioFile>BIRDSong_InsJ_Bird-Whistling_Robin_Single_02-01.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="190831622"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ObjectLists/>
+															<ActiveSourceList>
+																<ActiveSource Name="BIRDSong_InsJ_Bird-Whistling_Robin_Single_02-01" ID="{0CE125AD-6F07-44E5-A3D2-248F120B678A}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="BIRDSong_InsJ_Bird-Whistling_Robin_Single_03-01" ID="{BAE81AA0-36AC-4973-ACB9-63F97258EFE0}" ShortID="133477337">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D70F1E77-E8B7-41D6-9645-6538315620E9}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93772EA4-ACBC-4793-A4FE-3AB65A68105E}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="BIRDSong_InsJ_Bird-Whistling_Robin_Single_03-01" ID="{75B61A1A-0D04-4FA2-9BA7-702E5A59AEF0}">
+																	<Language>SFX</Language>
+																	<AudioFile>BIRDSong_InsJ_Bird-Whistling_Robin_Single_03-01.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="987453828"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ObjectLists/>
+															<ActiveSourceList>
+																<ActiveSource Name="BIRDSong_InsJ_Bird-Whistling_Robin_Single_03-01" ID="{75B61A1A-0D04-4FA2-9BA7-702E5A59AEF0}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="BIRDSong_InsJ_Bird-Whistling_Robin_Single_03-02" ID="{3D8558C8-042C-4E59-A657-13257EE0BF09}" ShortID="119397667">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D70F1E77-E8B7-41D6-9645-6538315620E9}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93772EA4-ACBC-4793-A4FE-3AB65A68105E}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="BIRDSong_InsJ_Bird-Whistling_Robin_Single_03-02" ID="{4F231CEA-430B-4109-AE05-EDD9B1D1CE21}">
+																	<Language>SFX</Language>
+																	<AudioFile>BIRDSong_InsJ_Bird-Whistling_Robin_Single_03-02.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="824633817"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ObjectLists/>
+															<ActiveSourceList>
+																<ActiveSource Name="BIRDSong_InsJ_Bird-Whistling_Robin_Single_03-02" ID="{4F231CEA-430B-4109-AE05-EDD9B1D1CE21}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="BIRDSong_InsJ_Bird-Whistling_Robin_Single_03-03" ID="{BF113BBA-EF5B-4809-A197-6FD983385D2B}" ShortID="513794880">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D70F1E77-E8B7-41D6-9645-6538315620E9}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93772EA4-ACBC-4793-A4FE-3AB65A68105E}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="BIRDSong_InsJ_Bird-Whistling_Robin_Single_03-03" ID="{9C9C38AD-3A08-42A5-A97E-A0DBC3B922AD}">
+																	<Language>SFX</Language>
+																	<AudioFile>BIRDSong_InsJ_Bird-Whistling_Robin_Single_03-03.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="981329521"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ObjectLists/>
+															<ActiveSourceList>
+																<ActiveSource Name="BIRDSong_InsJ_Bird-Whistling_Robin_Single_03-03" ID="{9C9C38AD-3A08-42A5-A97E-A0DBC3B922AD}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="BIRDSong_InsJ_Bird-Whistling_Robin_Single_03-04" ID="{DE88EDE1-DBF1-4F41-A274-E3B0FD84DEFD}" ShortID="661761256">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D70F1E77-E8B7-41D6-9645-6538315620E9}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93772EA4-ACBC-4793-A4FE-3AB65A68105E}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="BIRDSong_InsJ_Bird-Whistling_Robin_Single_03-04" ID="{AD275A91-98CA-4AE7-A4B4-E11B87C1F525}">
+																	<Language>SFX</Language>
+																	<AudioFile>BIRDSong_InsJ_Bird-Whistling_Robin_Single_03-04.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="404553881"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ObjectLists/>
+															<ActiveSourceList>
+																<ActiveSource Name="BIRDSong_InsJ_Bird-Whistling_Robin_Single_03-04" ID="{AD275A91-98CA-4AE7-A4B4-E11B87C1F525}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="BIRDSong_InsJ_Bird-Whistling_Robin_Single_03-05" ID="{6BC3CD6A-2C0B-4D56-B450-8A84E388DEBD}" ShortID="460325870">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D70F1E77-E8B7-41D6-9645-6538315620E9}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93772EA4-ACBC-4793-A4FE-3AB65A68105E}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="BIRDSong_InsJ_Bird-Whistling_Robin_Single_03-05" ID="{6A6E6408-86E6-40E6-B1D5-7637FEA317FB}">
+																	<Language>SFX</Language>
+																	<AudioFile>BIRDSong_InsJ_Bird-Whistling_Robin_Single_03-05.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="1265178"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ObjectLists/>
+															<ActiveSourceList>
+																<ActiveSource Name="BIRDSong_InsJ_Bird-Whistling_Robin_Single_03-05" ID="{6A6E6408-86E6-40E6-B1D5-7637FEA317FB}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SILENCE" ID="{F2DE11DF-E74B-4177-AFB0-8E292011554A}" ShortID="483241373">
+															<PropertyList>
+																<Property Name="Weight" Type="Real64">
+																	<ValueList>
+																		<Value>100</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D70F1E77-E8B7-41D6-9645-6538315620E9}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93772EA4-ACBC-4793-A4FE-3AB65A68105E}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<SourcePlugin Name="Wwise Silence" ID="{0002DCEF-3C6E-491D-AC4F-E1938637EFCB}" ShortID="618390144" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+																	<PropertyList>
+																		<Property Name="Length" Type="Real32" Value="2"/>
+																		<Property Name="LengthMax" Type="Real32" Value="8"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																</SourcePlugin>
+															</ChildrenList>
+															<ObjectLists/>
+															<ActiveSourceList>
+																<ActiveSource Name="Wwise Silence" ID="{0002DCEF-3C6E-491D-AC4F-E1938637EFCB}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+													<ObjectLists/>
+													<Playlist>
+														<ItemRef Name="BIRDSong_InsJ_Bird-Whistling_Robin_Single_01-01" ID="{93D6131A-A46D-4F55-BD68-46F40CD9F85A}"/>
+														<ItemRef Name="BIRDSong_InsJ_Bird-Whistling_Robin_Single_01-02" ID="{F0D3D4BF-1380-4964-8AC6-B0D4386F15DA}"/>
+														<ItemRef Name="BIRDSong_InsJ_Bird-Whistling_Robin_Single_01-03" ID="{9D0B9075-8BB9-4852-AE14-01E6E2D63337}"/>
+														<ItemRef Name="BIRDSong_InsJ_Bird-Whistling_Robin_Single_02-01" ID="{F63865D0-3FB9-4B14-A8CA-89FF5722714D}"/>
+														<ItemRef Name="BIRDSong_InsJ_Bird-Whistling_Robin_Single_03-01" ID="{BAE81AA0-36AC-4973-ACB9-63F97258EFE0}"/>
+														<ItemRef Name="BIRDSong_InsJ_Bird-Whistling_Robin_Single_03-02" ID="{3D8558C8-042C-4E59-A657-13257EE0BF09}"/>
+														<ItemRef Name="BIRDSong_InsJ_Bird-Whistling_Robin_Single_03-03" ID="{BF113BBA-EF5B-4809-A197-6FD983385D2B}"/>
+														<ItemRef Name="BIRDSong_InsJ_Bird-Whistling_Robin_Single_03-04" ID="{DE88EDE1-DBF1-4F41-A274-E3B0FD84DEFD}"/>
+														<ItemRef Name="BIRDSong_InsJ_Bird-Whistling_Robin_Single_03-05" ID="{6BC3CD6A-2C0B-4D56-B450-8A84E388DEBD}"/>
+													</Playlist>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="01" ID="{D02E75CF-AA62-44BA-8883-688E6BE8B72E}" ShortID="542099513">
+													<PropertyList>
+														<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+														<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D70F1E77-E8B7-41D6-9645-6538315620E9}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93772EA4-ACBC-4793-A4FE-3AB65A68105E}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="BIRDSong_InsJ_Bird-Whistling_Single_01-01" ID="{3510EAF9-AC3E-4DA5-81C3-EE8FD7EC1E0E}" ShortID="842367000">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D70F1E77-E8B7-41D6-9645-6538315620E9}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93772EA4-ACBC-4793-A4FE-3AB65A68105E}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="BIRDSong_InsJ_Bird-Whistling_Single_01-01" ID="{B8693AFB-F26D-437E-895D-11C96145A8F8}">
+																	<Language>SFX</Language>
+																	<AudioFile>BIRDSong_InsJ_Bird-Whistling_Single_01-01.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="747784178"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ObjectLists/>
+															<ActiveSourceList>
+																<ActiveSource Name="BIRDSong_InsJ_Bird-Whistling_Single_01-01" ID="{B8693AFB-F26D-437E-895D-11C96145A8F8}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="BIRDSong_InsJ_Bird-Whistling_Single_01-02" ID="{C2644A49-7569-4F52-8E92-BC555AADA748}" ShortID="333458920">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D70F1E77-E8B7-41D6-9645-6538315620E9}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93772EA4-ACBC-4793-A4FE-3AB65A68105E}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="BIRDSong_InsJ_Bird-Whistling_Single_01-02" ID="{02876D82-E499-4349-8DBA-59C0A794A3F4}">
+																	<Language>SFX</Language>
+																	<AudioFile>BIRDSong_InsJ_Bird-Whistling_Single_01-02.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="155287113"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ObjectLists/>
+															<ActiveSourceList>
+																<ActiveSource Name="BIRDSong_InsJ_Bird-Whistling_Single_01-02" ID="{02876D82-E499-4349-8DBA-59C0A794A3F4}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="BIRDSong_InsJ_Bird-Whistling_Single_01-03" ID="{BC37F0F2-21FC-4757-9862-DC1D3CC23A29}" ShortID="595471699">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D70F1E77-E8B7-41D6-9645-6538315620E9}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93772EA4-ACBC-4793-A4FE-3AB65A68105E}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="BIRDSong_InsJ_Bird-Whistling_Single_01-03" ID="{7FBDE195-0193-4B94-9855-C2DE95EA7EE7}">
+																	<Language>SFX</Language>
+																	<AudioFile>BIRDSong_InsJ_Bird-Whistling_Single_01-03.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="120367361"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ObjectLists/>
+															<ActiveSourceList>
+																<ActiveSource Name="BIRDSong_InsJ_Bird-Whistling_Single_01-03" ID="{7FBDE195-0193-4B94-9855-C2DE95EA7EE7}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SILENCE" ID="{B9B193AC-F4D6-4AFC-A896-01C6B108D4A6}" ShortID="931488440">
+															<PropertyList>
+																<Property Name="3DSpatialization" Type="int16" Value="1"/>
+																<Property Name="Weight" Type="Real64">
+																	<ValueList>
+																		<Value>100</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Attenuation">
+																	<Custom>
+																		<Attenuation Name="Attenuation (Custom)" ID="{CF35498D-D62B-4868-AB0B-DB44027526CC}" ShortID="766928453">
+																			<CurveUsageInfoList>
+																				<VolumeDryUsage>
+																					<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+																						<Curve Name="VolumeDry" ID="{DF08D390-751B-42E8-87DE-5D40470A8512}">
+																							<PropertyList>
+																								<Property Name="Flags" Type="int32" Value="3"/>
+																							</PropertyList>
+																							<PointList>
+																								<Point>
+																									<XPos>0</XPos>
+																									<YPos>0</YPos>
+																									<Flags>5</Flags>
+																								</Point>
+																								<Point>
+																									<XPos>100</XPos>
+																									<YPos>-200</YPos>
+																									<Flags>37</Flags>
+																								</Point>
+																							</PointList>
+																						</Curve>
+																					</CurveUsageInfo>
+																				</VolumeDryUsage>
+																				<VolumeWetGameUsage>
+																					<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+																				</VolumeWetGameUsage>
+																				<VolumeWetUserUsage>
+																					<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+																				</VolumeWetUserUsage>
+																				<LowPassFilterUsage>
+																					<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																				</LowPassFilterUsage>
+																				<HighPassFilterUsage>
+																					<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																				</HighPassFilterUsage>
+																				<SpreadUsage>
+																					<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																				</SpreadUsage>
+																				<FocusUsage>
+																					<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																				</FocusUsage>
+																			</CurveUsageInfoList>
+																		</Attenuation>
+																	</Custom>
+																</Reference>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D70F1E77-E8B7-41D6-9645-6538315620E9}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Ambience" ID="{34830421-4EB6-4ED5-A569-B8400A319FF5}" WorkUnitID="{93772EA4-ACBC-4793-A4FE-3AB65A68105E}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<SourcePlugin Name="Wwise Silence" ID="{185F29ED-7494-4ECB-857C-6BF0551885CD}" ShortID="57064464" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+																	<PropertyList>
+																		<Property Name="Length" Type="Real32" Value="2"/>
+																		<Property Name="LengthMax" Type="Real32" Value="8"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																</SourcePlugin>
+															</ChildrenList>
+															<ObjectLists/>
+															<ActiveSourceList>
+																<ActiveSource Name="Wwise Silence" ID="{185F29ED-7494-4ECB-857C-6BF0551885CD}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+													<ObjectLists/>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="02" ID="{E5CB3F7B-FC52-4774-809F-F1784CAC6814}" ShortID="975809666">
+													<PropertyList>
+														<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+														<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+														<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D70F1E77-E8B7-41D6-9645-6538315620E9}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93772EA4-ACBC-4793-A4FE-3AB65A68105E}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="BIRDSong_InsJ_Bird-Whistling_Single_02-01" ID="{0FFFD65A-3979-4D53-8D68-A639BD907F07}" ShortID="196484553">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D70F1E77-E8B7-41D6-9645-6538315620E9}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93772EA4-ACBC-4793-A4FE-3AB65A68105E}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="BIRDSong_InsJ_Bird-Whistling_Single_02-01" ID="{9811004B-3C9C-4D66-B102-3DEE568C9B65}">
+																	<Language>SFX</Language>
+																	<AudioFile>BIRDSong_InsJ_Bird-Whistling_Single_02-01.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="629097950"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ObjectLists/>
+															<ActiveSourceList>
+																<ActiveSource Name="BIRDSong_InsJ_Bird-Whistling_Single_02-01" ID="{9811004B-3C9C-4D66-B102-3DEE568C9B65}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="BIRDSong_InsJ_Bird-Whistling_Single_02-02" ID="{A64F33B6-A814-4AD6-AC83-612FCAC8DA49}" ShortID="228979994">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D70F1E77-E8B7-41D6-9645-6538315620E9}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93772EA4-ACBC-4793-A4FE-3AB65A68105E}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="BIRDSong_InsJ_Bird-Whistling_Single_02-02" ID="{5490CC64-CF74-44B7-AB9A-2FB88BF25437}">
+																	<Language>SFX</Language>
+																	<AudioFile>BIRDSong_InsJ_Bird-Whistling_Single_02-02.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="290829446"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ObjectLists/>
+															<ActiveSourceList>
+																<ActiveSource Name="BIRDSong_InsJ_Bird-Whistling_Single_02-02" ID="{5490CC64-CF74-44B7-AB9A-2FB88BF25437}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="BIRDSong_InsJ_Bird-Whistling_Single_02-03" ID="{5F2C6832-4ABA-449F-BD5C-ABCEE754FA9E}" ShortID="665300687">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D70F1E77-E8B7-41D6-9645-6538315620E9}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93772EA4-ACBC-4793-A4FE-3AB65A68105E}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="BIRDSong_InsJ_Bird-Whistling_Single_02-03" ID="{E62EE2FF-2C8E-4F57-BDD5-80CB2A9F7CB9}">
+																	<Language>SFX</Language>
+																	<AudioFile>BIRDSong_InsJ_Bird-Whistling_Single_02-03.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="61831063"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ObjectLists/>
+															<ActiveSourceList>
+																<ActiveSource Name="BIRDSong_InsJ_Bird-Whistling_Single_02-03" ID="{E62EE2FF-2C8E-4F57-BDD5-80CB2A9F7CB9}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="BIRDSong_InsJ_Bird-Whistling_Single_02-04" ID="{2C985A35-DC21-409A-8B81-6A1B68AC948C}" ShortID="1007641050">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D70F1E77-E8B7-41D6-9645-6538315620E9}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93772EA4-ACBC-4793-A4FE-3AB65A68105E}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="BIRDSong_InsJ_Bird-Whistling_Single_02-04" ID="{A15E0856-299B-4A8E-9505-520ECA8EB818}">
+																	<Language>SFX</Language>
+																	<AudioFile>BIRDSong_InsJ_Bird-Whistling_Single_02-04.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="544189942"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ObjectLists/>
+															<ActiveSourceList>
+																<ActiveSource Name="BIRDSong_InsJ_Bird-Whistling_Single_02-04" ID="{A15E0856-299B-4A8E-9505-520ECA8EB818}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="BIRDSong_InsJ_Bird-Whistling_Single_02-05" ID="{6DCFED79-E163-44CC-9F88-D6093C618E9E}" ShortID="792632869">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D70F1E77-E8B7-41D6-9645-6538315620E9}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93772EA4-ACBC-4793-A4FE-3AB65A68105E}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="BIRDSong_InsJ_Bird-Whistling_Single_02-05" ID="{0F5AE8AC-C3DF-4499-AF66-7F447B605772}">
+																	<Language>SFX</Language>
+																	<AudioFile>BIRDSong_InsJ_Bird-Whistling_Single_02-05.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="171079171"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ObjectLists/>
+															<ActiveSourceList>
+																<ActiveSource Name="BIRDSong_InsJ_Bird-Whistling_Single_02-05" ID="{0F5AE8AC-C3DF-4499-AF66-7F447B605772}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="BIRDSong_InsJ_Bird-Whistling_Single_02-06" ID="{7561A327-EC61-406A-B75E-B46F68C3E939}" ShortID="485579866">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D70F1E77-E8B7-41D6-9645-6538315620E9}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93772EA4-ACBC-4793-A4FE-3AB65A68105E}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="BIRDSong_InsJ_Bird-Whistling_Single_02-06" ID="{944AB917-F823-43EA-9CA4-BAA57CA9A89F}">
+																	<Language>SFX</Language>
+																	<AudioFile>BIRDSong_InsJ_Bird-Whistling_Single_02-06.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="991873074"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ObjectLists/>
+															<ActiveSourceList>
+																<ActiveSource Name="BIRDSong_InsJ_Bird-Whistling_Single_02-06" ID="{944AB917-F823-43EA-9CA4-BAA57CA9A89F}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="BIRDSong_InsJ_Bird-Whistling_Single_02-07" ID="{E9A574DD-A01E-4707-B091-6C425B561235}" ShortID="723243249">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D70F1E77-E8B7-41D6-9645-6538315620E9}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93772EA4-ACBC-4793-A4FE-3AB65A68105E}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="BIRDSong_InsJ_Bird-Whistling_Single_02-07" ID="{E5EF103A-DE2F-4B36-AC7D-7440E0596787}">
+																	<Language>SFX</Language>
+																	<AudioFile>BIRDSong_InsJ_Bird-Whistling_Single_02-07.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="617264448"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ObjectLists/>
+															<ActiveSourceList>
+																<ActiveSource Name="BIRDSong_InsJ_Bird-Whistling_Single_02-07" ID="{E5EF103A-DE2F-4B36-AC7D-7440E0596787}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="BIRDSong_InsJ_Bird-Whistling_Single_02-08" ID="{254AEC2D-61C0-4617-89E6-A6BA37DC205B}" ShortID="997448146">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D70F1E77-E8B7-41D6-9645-6538315620E9}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93772EA4-ACBC-4793-A4FE-3AB65A68105E}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="BIRDSong_InsJ_Bird-Whistling_Single_02-08" ID="{A62AED80-5363-4140-A5F4-C0877CA798EB}">
+																	<Language>SFX</Language>
+																	<AudioFile>BIRDSong_InsJ_Bird-Whistling_Single_02-08.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="945282750"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ObjectLists/>
+															<ActiveSourceList>
+																<ActiveSource Name="BIRDSong_InsJ_Bird-Whistling_Single_02-08" ID="{A62AED80-5363-4140-A5F4-C0877CA798EB}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="BIRDSong_InsJ_Bird-Whistling_Single_02-09" ID="{49858FC9-3E1E-4812-9CC4-8D08C77E77F1}" ShortID="513998983">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D70F1E77-E8B7-41D6-9645-6538315620E9}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93772EA4-ACBC-4793-A4FE-3AB65A68105E}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="BIRDSong_InsJ_Bird-Whistling_Single_02-09" ID="{C629AC1D-8F4C-40E0-8A91-FAC2F624E75C}">
+																	<Language>SFX</Language>
+																	<AudioFile>BIRDSong_InsJ_Bird-Whistling_Single_02-09.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="26980477"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ObjectLists/>
+															<ActiveSourceList>
+																<ActiveSource Name="BIRDSong_InsJ_Bird-Whistling_Single_02-09" ID="{C629AC1D-8F4C-40E0-8A91-FAC2F624E75C}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="BIRDSong_InsJ_Bird-Whistling_Single_02-10" ID="{2F906E61-C2A6-4C25-B982-11960D6E4019}" ShortID="649926134">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D70F1E77-E8B7-41D6-9645-6538315620E9}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93772EA4-ACBC-4793-A4FE-3AB65A68105E}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="BIRDSong_InsJ_Bird-Whistling_Single_02-10" ID="{037D1BF6-1F39-43E8-B513-4E54BA7F0A53}">
+																	<Language>SFX</Language>
+																	<AudioFile>BIRDSong_InsJ_Bird-Whistling_Single_02-10.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="311113941"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ObjectLists/>
+															<ActiveSourceList>
+																<ActiveSource Name="BIRDSong_InsJ_Bird-Whistling_Single_02-10" ID="{037D1BF6-1F39-43E8-B513-4E54BA7F0A53}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="BIRDSong_InsJ_Bird-Whistling_Single_02-11" ID="{01B02481-41A5-40AD-A687-19C9552F0710}" ShortID="220570117">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D70F1E77-E8B7-41D6-9645-6538315620E9}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93772EA4-ACBC-4793-A4FE-3AB65A68105E}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="BIRDSong_InsJ_Bird-Whistling_Single_02-11" ID="{AD0EBE46-4032-4B40-B068-68B330C7E5A7}">
+																	<Language>SFX</Language>
+																	<AudioFile>BIRDSong_InsJ_Bird-Whistling_Single_02-11.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="95705669"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ObjectLists/>
+															<ActiveSourceList>
+																<ActiveSource Name="BIRDSong_InsJ_Bird-Whistling_Single_02-11" ID="{AD0EBE46-4032-4B40-B068-68B330C7E5A7}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SILENCE" ID="{76C7A453-05E5-4CF4-B5F9-C618A9DF9A88}" ShortID="587015260">
+															<PropertyList>
+																<Property Name="3DSpatialization" Type="int16" Value="1"/>
+																<Property Name="Weight" Type="Real64">
+																	<ValueList>
+																		<Value>100</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Attenuation">
+																	<Custom>
+																		<Attenuation Name="Attenuation (Custom)" ID="{00CEC075-8BA3-449D-9CA5-0E0CDCC0F8FE}" ShortID="4841591">
+																			<CurveUsageInfoList>
+																				<VolumeDryUsage>
+																					<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+																						<Curve Name="VolumeDry" ID="{05C7E37E-B5A6-46C1-A57A-C0682429A33F}">
+																							<PropertyList>
+																								<Property Name="Flags" Type="int32" Value="3"/>
+																							</PropertyList>
+																							<PointList>
+																								<Point>
+																									<XPos>0</XPos>
+																									<YPos>0</YPos>
+																									<Flags>5</Flags>
+																								</Point>
+																								<Point>
+																									<XPos>100</XPos>
+																									<YPos>-200</YPos>
+																									<Flags>37</Flags>
+																								</Point>
+																							</PointList>
+																						</Curve>
+																					</CurveUsageInfo>
+																				</VolumeDryUsage>
+																				<VolumeWetGameUsage>
+																					<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+																				</VolumeWetGameUsage>
+																				<VolumeWetUserUsage>
+																					<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+																				</VolumeWetUserUsage>
+																				<LowPassFilterUsage>
+																					<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																				</LowPassFilterUsage>
+																				<HighPassFilterUsage>
+																					<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																				</HighPassFilterUsage>
+																				<SpreadUsage>
+																					<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																				</SpreadUsage>
+																				<FocusUsage>
+																					<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																				</FocusUsage>
+																			</CurveUsageInfoList>
+																		</Attenuation>
+																	</Custom>
+																</Reference>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D70F1E77-E8B7-41D6-9645-6538315620E9}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Ambience" ID="{34830421-4EB6-4ED5-A569-B8400A319FF5}" WorkUnitID="{93772EA4-ACBC-4793-A4FE-3AB65A68105E}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<SourcePlugin Name="Wwise Silence" ID="{3CA7B12A-EF7F-479D-BFE8-A22096A96E3C}" ShortID="907424689" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+																	<PropertyList>
+																		<Property Name="Length" Type="Real32" Value="2"/>
+																		<Property Name="LengthMax" Type="Real32" Value="8"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																</SourcePlugin>
+															</ChildrenList>
+															<ObjectLists/>
+															<ActiveSourceList>
+																<ActiveSource Name="Wwise Silence" ID="{3CA7B12A-EF7F-479D-BFE8-A22096A96E3C}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+													<ObjectLists/>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="03" ID="{854A9BA8-24C2-4E8A-852A-B3281B3D5CA7}" ShortID="504930373">
+													<PropertyList>
+														<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+														<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D70F1E77-E8B7-41D6-9645-6538315620E9}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93772EA4-ACBC-4793-A4FE-3AB65A68105E}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="BIRDSong_InsJ_Bird-Whistling_Single_03-01" ID="{C3F5EB8F-CB47-4912-B24E-04409E3C1156}" ShortID="734621217">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D70F1E77-E8B7-41D6-9645-6538315620E9}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93772EA4-ACBC-4793-A4FE-3AB65A68105E}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="BIRDSong_InsJ_Bird-Whistling_Single_03-01" ID="{6C2C8607-DC22-48CC-95C7-3EC46B308B56}">
+																	<Language>SFX</Language>
+																	<AudioFile>BIRDSong_InsJ_Bird-Whistling_Single_03-01.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="147937265"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ObjectLists/>
+															<ActiveSourceList>
+																<ActiveSource Name="BIRDSong_InsJ_Bird-Whistling_Single_03-01" ID="{6C2C8607-DC22-48CC-95C7-3EC46B308B56}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SILENCE" ID="{A20244F6-3109-4B1D-A4A2-B30D6A59CEE7}" ShortID="22902046">
+															<PropertyList>
+																<Property Name="3DSpatialization" Type="int16" Value="1"/>
+																<Property Name="Weight" Type="Real64">
+																	<ValueList>
+																		<Value>100</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Attenuation">
+																	<Custom>
+																		<Attenuation Name="Attenuation (Custom)" ID="{17AD0DC6-41B8-4D08-B17D-D8A490BEA005}" ShortID="297269320">
+																			<CurveUsageInfoList>
+																				<VolumeDryUsage>
+																					<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+																						<Curve Name="VolumeDry" ID="{F15B3198-85D1-42A4-B117-ADEF336C83CE}">
+																							<PropertyList>
+																								<Property Name="Flags" Type="int32" Value="3"/>
+																							</PropertyList>
+																							<PointList>
+																								<Point>
+																									<XPos>0</XPos>
+																									<YPos>0</YPos>
+																									<Flags>5</Flags>
+																								</Point>
+																								<Point>
+																									<XPos>100</XPos>
+																									<YPos>-200</YPos>
+																									<Flags>37</Flags>
+																								</Point>
+																							</PointList>
+																						</Curve>
+																					</CurveUsageInfo>
+																				</VolumeDryUsage>
+																				<VolumeWetGameUsage>
+																					<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+																				</VolumeWetGameUsage>
+																				<VolumeWetUserUsage>
+																					<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+																				</VolumeWetUserUsage>
+																				<LowPassFilterUsage>
+																					<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																				</LowPassFilterUsage>
+																				<HighPassFilterUsage>
+																					<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																				</HighPassFilterUsage>
+																				<SpreadUsage>
+																					<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																				</SpreadUsage>
+																				<FocusUsage>
+																					<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																				</FocusUsage>
+																			</CurveUsageInfoList>
+																		</Attenuation>
+																	</Custom>
+																</Reference>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D70F1E77-E8B7-41D6-9645-6538315620E9}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Ambience" ID="{34830421-4EB6-4ED5-A569-B8400A319FF5}" WorkUnitID="{93772EA4-ACBC-4793-A4FE-3AB65A68105E}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<SourcePlugin Name="Wwise Silence" ID="{3453F344-4C4D-4989-9B6B-34DB721D1AA8}" ShortID="284110208" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+																	<PropertyList>
+																		<Property Name="Length" Type="Real32" Value="2"/>
+																		<Property Name="LengthMax" Type="Real32" Value="8"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																</SourcePlugin>
+															</ChildrenList>
+															<ObjectLists/>
+															<ActiveSourceList>
+																<ActiveSource Name="Wwise Silence" ID="{3453F344-4C4D-4989-9B6B-34DB721D1AA8}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+													<ObjectLists/>
+												</RandomSequenceContainer>
 											</ChildrenList>
 											<ObjectLists/>
 										</RandomSequenceContainer>
